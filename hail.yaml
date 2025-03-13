@@ -1,0 +1,9 @@
+resource: "https://meteo.netitservices.com/api/v1/devices/XXXX/poll?hwtypeId=YYYY"
+scan_interval: 120
+timeout: 240 
+
+
+sensor:
+  - unique_id: "hail_status"
+    name: "Hail Status VFK"
+    value_template: "{{ value_json.currentState }}"

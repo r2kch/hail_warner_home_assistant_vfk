@@ -1,8 +1,10 @@
 # Hail warner for Home Assistant - based on VFK API (Switzerland only!)
-More to come
+easy to use API for hail warning in Switzerland (only in Switzerland) from Vereinigung Kantonaler Feuerversicherungen (VKF)
+ 
 
 ## Get access to the API
-More to come 
+Follow the process here: 
+https://www.hagelschutz-einfach-automatisch.ch/eigentuemer-verwaltungen/produkt/ich-habe-interesse.html
 
 
 ## Sensor 

@@ -19,3 +19,6 @@ the hail.yaml needs to be in the HA directroy
 #####Hail Status VFK####
 rest: !include hail.yaml
 ```
+
+## Automation
+in my case, i use a shelly - use what ever fits for your purpose. Important are the triggers, the sensor goes to 1 if hail is forcasted. the test alert sets the value of 2. 

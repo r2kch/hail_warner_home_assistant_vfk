@@ -1,0 +1,43 @@
+alias: Action - Hail incoming
+description: ""
+triggers:
+  - trigger: state
+    entity_id:
+      - sensor.hail_status_vfk
+    from: "0"
+    to: "1"
+  - trigger: state
+    entity_id:
+      - sensor.hail_status_vfk
+    from: "0"
+    to: "2"
+conditions: []
+actions:
+  - parallel:
+      - if:
+          - condition: device
+            device_id: 962ec5977e2324863c849b41889b0b99
+            domain: cover
+            entity_id: 3a93d2865ae1e537be151105f29c3d55
+            type: is_position
+            below: 100
+        then:
+          - device_id: 962ec5977e2324863c849b41889b0b99
+            domain: cover
+            entity_id: 3a93d2865ae1e537be151105f29c3d55
+            type: open
+        alias: Zimmer 1
+      - if:
+          - condition: device
+            device_id: bde16d68f512de4101604c6e45b1d599
+            domain: cover
+            entity_id: c630548758772e7ef96e05f66ee7de33
+            type: is_position
+            below: 100
+        then:
+          - device_id: bde16d68f512de4101604c6e45b1d599
+            domain: cover
+            entity_id: c630548758772e7ef96e05f66ee7de33
+            type: open
+        alias: Zimmer 2
+mode: single
